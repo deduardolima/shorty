@@ -1,0 +1,61 @@
+### Criar novo encurtador
+POST http://localhost:5510/shorty/create
+Content-Type: application/json
+
+{   
+    "name": "1",
+    "description": "ativo",
+    "sms": false,    
+    "shorty": "",
+    "link_destino": "https://www.condor.com.br/emkt/content/emkt_clubecondor_cl01v4.html",
+    "start_date": "31/10/2022",
+    "finish_date": "30/10/2022",  
+    "status": 4,    
+    "origem": "condor"
+}
+
+
+### Pegar todos shortcuts
+GET http://localhost:5510/shorty/all
+Content-Type: application/json
+
+### Tem que funcionar caralho
+GET http://localhost:5510/zEV8To
+
+
+
+### Pegar shortcut pelo ID
+GET http://localhost:5510/shorty/63581edaf345a9a4452cfcf1
+Content-Type: application/json
+
+### Atualizar shortcut
+
+PATCH  http://localhost:5510/shorty/update/63581edaf345a9a4452cfcf1
+Content-Type: application/json
+
+{       
+    "name":"alterado 232323",
+    "status":1
+}   
+
+### Pegar todos contadores 
+
+GET http://localhost:5510/counter/all
+Content-Type: application/json
+
+
+
+### Pegar contador por ID
+GET http://localhost:5510/counter/63616764fa952bc566843cc6
+Content-Type: application/json
+
+
+###
+GET http://localhost:5510/counter/filter
+Content-Type: application/json
+
+{   
+	"id": "63616764fa952bc566843cc6",
+    "start_date": "31/10/2022",
+    "finish_date": "03/11/2022"
+}
